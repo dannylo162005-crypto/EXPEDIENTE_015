@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
+  <title>EXPEDIENTE 015 | Acceso restringido</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <div class="brand">◈ EXPEDIENTE 015 <span>// ARCHIVO PRIVADO</span></div>
+    <div class="system-status"><i></i> SISTEMA EN LÍNEA</div>
+  </header>
+
+  <main class="container">
+
+    <!-- PANTALLA DE INICIO -->
+    <section id="intro" class="panel">
+      <p class="eyebrow">PROTOCOLO DE ACCESO // NIVEL 0</p>
+
+      <div class="hero-grid">
+        <div>
+          <p class="micro">USUARIA DETECTADA: <span class="cyan">ESTHEFANY</span></p>
+
+          <h1>¿ACEPTAS<br><span>LA MISIÓN?</span></h1>
+
+          <p class="description">
+            Se ha encontrado un expediente cifrado. En su interior hay
+            30 pruebas, pistas ocultas y un mensaje que permanece bloqueado.
+          </p>
+
+          <p class="description secondary">
+            Solo completando la investigación podrás descubrir qué preparó
+            Danilo para ti. No necesitas conocer todas las respuestas:
+            algunas pruebas están diseñadas para descubrir cosas nuevas.
+          </p>
+
+          <button id="startBtn" class="btn primary">
+            INICIAR SECUENCIA ↗
+          </button>
+        </div>
+
+        <div class="terminal">
+          <div class="terminal-header">
+            <span></span><span></span><span></span>
+            <small>secure_shell.exe</small>
+          </div>
+
+          <div class="terminal-content">
+            <p class="muted">Inicializando archivo privado...</p>
+            <p><span class="green">[OK]</span> Identidad verificada</p>
+            <p><span class="green">[OK]</span> 30 pruebas cargadas</p>
+            <p><span class="green">[OK]</span> Sorpresa cifrada</p>
+            <p><span class="amber">[LOCK]</span> Mensaje final</p>
+            <p class="cyan">Esperando instrucciones<span class="cursor">_</span></p>
+            <div class="lock">⌑</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div><strong>30</strong><small>PRUEBAS</small></div>
+        <div><strong>03</strong><small>NIVELES</small></div>
+        <div><strong>01</strong><small>SECRETO FINAL</small></div>
+      </div>
+
+      <p class="fineprint">PROYECTO PERSONALIZADO // DANILO + ESTHEFANY</p>
+    </section>
+
+    <!-- PANTALLA DEL JUEGO -->
+    <section id="game" class="panel hidden">
+      <div class="game-heading">
+        <div>
+          <p id="levelLabel" class="eyebrow">NIVEL 01</p>
+          <h2 id="levelName">Identidad digital</h2>
+        </div>
+
+        <div class="score-box">
+          PUNTOS
+          <strong id="score">000</strong>
+        </div>
+      </div>
+
+      <div class="progress-info">
+        <span id="questionNumber">PRUEBA 01 / 30</span>
+        <span id="percentage">0%</span>
+      </div>
+
+      <div class="progress">
+        <div id="progressBar"></div>
+      </div>
+
+      <div class="tags">
+        <span id="category" class="tag">IDENTIDAD</span>
+        <span id="difficulty" class="tag purple">INICIACIÓN</span>
+      </div>
+
+      <h2 id="questionTitle" class="question-title"></h2>
+      <p id="questionText" class="description"></p>
+
+      <div id="answers" class="answers"></div>
+
+      <div id="hintBox" class="hint hidden"></div>
+      <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+
+      <div class="actions">
+        <button id="hintBtn" class="btn secondary-btn">
+          ⌁ SOLICITAR PISTA (-2 PUNTOS)
+        </button>
+
+        <button id="submitBtn" class="btn primary hidden">
+          CONFIRMAR RESPUESTA ↗
+        </button>
+
+        <button id="nextBtn" class="btn primary hidden">
+          SIGUIENTE PRUEBA →
+        </button>
+      </div>
+
+      <div class="game-footer">
+        <span>OPERADORA: ESTHEFANY</span>
+        <span id="streak">RACHA: 0</span>
+      </div>
+    </section>
+
+    <!-- PANTALLA FINAL -->
+    <section id="final" class="panel hidden">
+      <p class="eyebrow">AUTENTICACIÓN COMPLETA // 30 DE 30</p>
+
+      <div class="final-symbol">✦</div>
+      <h1>ARCHIVO<br><span>DESENCRIPTADO</span></h1>
+
+      <p id="finalIntro" class="description"></p>
+
+      <div class="final-stats">
+        <div>
+          <small>PUNTUACIÓN</small>
+          <strong id="finalScore">0</strong>
+        </div>
+        <div>
+          <small>DATOS ACERTADOS</small>
+          <strong id="finalCorrect">0</strong>
+        </div>
+        <div>
+          <small>PISTAS USADAS</small>
+          <strong id="finalHints">0</strong>
+        </div>
+      </div>
+
+      <div class="rank-box">
+        <p class="eyebrow">CLASIFICACIÓN FINAL</p>
+        <h2 id="finalRank">INVESTIGADORA</h2>
+        <p id="rankDescription"></p>
+      </div>
+
+      <div class="secret-message">
+        <div class="message-header">
+          <span class="green">● ARCHIVO ABIERTO</span>
+          <span>MENSAJE 015</span>
+        </div>
+
+        <h2>Para ti, Esthefany 🤍</h2>
+        <div id="loveMessage"></div>
+      </div>
+
+      <div class="actions">
+        <button id="replayBtn" class="btn primary">
+          VOLVER A JUGAR ↻
+        </button>
+        <button id="copyBtn" class="btn secondary-btn">
+          COPIAR RESULTADO
+        </button>
+      </div>
+
+      <p class="fineprint">
+        FIN DE LA TRANSMISIÓN // LO QUE SIGUE LO ESCRIBEN USTEDES.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    E-015 <span>•</span> CONEXIÓN CIFRADA <span>•</span> DANILO & ESTHEFANY
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
